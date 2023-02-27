@@ -1,0 +1,107 @@
+#logo{
+      animation-iteration-count: 1;
+      animation: growLogo 5s;
+}
+@keyframes growlogo {
+      from {width: 25px; opacity: 0;}
+      to {width: 475px; opacity: 1;}
+}
+body{
+      font-family: 'Poppins', serif;
+      background-image: url('concrete_seamless.png');
+      background-color: #f1f1f1;
+}
+header{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+}
+.nav_links{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+}     
+a:visited{
+      color: #0000ff;
+}
+.card > header{
+      background-color: #288088;
+      border: 2px solid #45adad;
+      padding: 20px 0px;
+      border-radius: 50px 50px 0px 0px;
+}
+.card{
+      flex-basis: 450px;
+      border-radius: 50px 50px 0px 0px;
+}
+.pricing{
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+}
+.gallery img {
+      border:  10px solid #50c7c7;
+      margin: 10px;
+      width: 300px;
+}
+.gallery{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+}
+@media screen and (min-width: 900px) {
+      header, .nav_links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+      }
+}
+.pricing, .card{
+      flex-basis: 275px;
+}
+body > header{
+      position: sticky;
+      top: 0px;
+}
+@media(prefers-reduced-motion: reduce) {
+      #logo{
+            animation: none;
+      }
+}
+@media print {
+      body { 
+            font-family: Arial, Helvetica;
+            background-image: none;
+      }
+  
+      nav, .nav_links{
+            width: 100%;
+            justify-content: space-around;
+            flex-direction: row;          
+      }
+  
+      .pricing {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: nowrap;
+      }
+  
+      .card {
+            border: 2px solid #45addd;
+            flex-basis: 325px;
+      }
+  
+      .gallery, #gallery {
+            display: none;
+      }
+  
+      .card li:nth-child(2)::after {
+            content: "👍";
+      }
+  }
